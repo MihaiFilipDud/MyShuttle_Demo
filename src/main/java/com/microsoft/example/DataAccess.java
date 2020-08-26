@@ -32,7 +32,7 @@ public class DataAccess
 			// Bootstrap driver into JVM
 			Class.forName(DB_DRIVER);
 
-			String conStr = System.getenv("MYSQLCONNSTR_mysql");
+			String conStr = System.getenv("MYSQLCONNSTR_mysql") + "&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 			if (conStr == null || conStr.trim().length() == 0) {
 				theConnection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
 			} else {
