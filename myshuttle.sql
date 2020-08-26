@@ -1,30 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 4.9.2
--- https://www.phpmyadmin.net/
---
--- Gazdă: 127.0.0.1:3308
--- Timp de generare: aug. 26, 2020 la 10:56 AM
--- Versiune server: 5.7.28
--- Versiune PHP: 7.3.12
 
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Bază de date: "myshuttle"
---
-
--- --------------------------------------------------------
-
---
--- Structură tabel pentru tabel "employees"
 --
 
 DROP TABLE IF EXISTS `employees`;
