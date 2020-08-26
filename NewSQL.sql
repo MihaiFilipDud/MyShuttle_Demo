@@ -1,5 +1,4 @@
 CREATE DATABASE alm;
-use alm;
 
 CREATE TABLE employees (
   [id] int NOT NULL IDENTITY,
