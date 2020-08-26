@@ -1,8 +1,29 @@
 
 --
 
+CREATE TABLE employees (
+  [id] int NOT NULL IDENTITY,
+  [username] varchar(20) DEFAULT NULL,
+  [password] varchar(20) DEFAULT NULL,
+  PRIMARY KEY ([id])
+)  ;
+CREATE TABLE fares (
+  [id] int NOT NULL IDENTITY,
+  [emp_id] int DEFAULT NULL,
+  [pickup] varchar(50) DEFAULT NULL ,
+  [dropoff] varchar(50) DEFAULT NULL ,
+  [start] datetime2(0) DEFAULT NULL,
+  [end] datetime2(0) DEFAULT NULL,
+  [fare_charge] int DEFAULT NULL ,
+  [driver_fee] int DEFAULT NULL ,
+  [passenger_rating] smallint check ([passenger_rating] > 0) DEFAULT NULL ,
+  [driver_rating] smallint check ([driver_rating] > 0) DEFAULT NULL ,
+  PRIMARY KEY ([id])
+ ,
+  CONSTRAINT [fares_ibfk_1] FOREIGN KEY ([emp_id]) REFERENCES employees ([id])
+)  ;
 
-CREATE TABLE "employees" ;
+
 
 --
 -- Eliminarea datelor din tabel "employees"
@@ -24,7 +45,7 @@ SET IDENTITY_INSERT "employees" OFF;
 --
 
 
-CREATE TABLE "fares" ;
+
 
 --
 -- Eliminarea datelor din tabel "fares"
