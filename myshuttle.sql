@@ -1,5 +1,7 @@
 
 --
+DROP TABLE IF EXISTS employees ;
+DROP TABLE IF EXISTS fares ;
 
 CREATE TABLE employees (
   [id] int NOT NULL IDENTITY,
