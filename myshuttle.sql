@@ -1,7 +1,7 @@
 
 --
 
-DROP TABLE IF EXISTS `employees`;
+DROP TABLE IF EXISTS 'employees';
 CREATE TABLE "employees" ;
 
 --
@@ -20,10 +20,10 @@ SET IDENTITY_INSERT "employees" OFF;
 -- --------------------------------------------------------
 
 --
--- Structură tabel pentru tabel "fares"
+-- Structur? tabel pentru tabel "fares"
 --
 
-DROP TABLE IF EXISTS `fares`;
+DROP TABLE IF EXISTS 'fares';
 CREATE TABLE "fares" ;
 
 --
