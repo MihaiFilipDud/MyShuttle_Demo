@@ -22,28 +22,26 @@ public class DataAccess
 {
 	// Some database-specific details we'll need
 	private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
-	private static final String DB_URL = "jdbc:mysql://mihaifilipmysql.mysql.database.azure.com:3306/mihaifilipmysql?useSSL=true&requireSSL=false";
+	private static final String DB_URL = "jdbc:mysql://db:3306/MyShuttleDb";
 	private static final String DB_USER = "user";
 	private static final String DB_PASS = "password";
 	
 	private static Connection theConnection;
 	static {
 		try {
-			// // Bootstrap driver into JVM
-			// Class.forName(DB_DRIVER);
+			// Bootstrap driver into JVM
+			Class.forName(DB_DRIVER);
 
-			// String conStr = System.getenv("MYSQLCONNSTR_MyShuttleDb");
-			// if (conStr == null || conStr.trim().length() == 0) {
-			// 	theConnection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-			// } else {
-			// 	theConnection = DriverManager.getConnection(conStr);
-			// }
-			theConnection = DriverManager.getConnection(DB_URL, "mihaifilip@mihaifilipmysql", "Password123");
+			String conStr = System.getenv("MYSQLCONNSTR_MyShuttleDb");
+			if (conStr == null || conStr.trim().length() == 0) {
+				theConnection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
+			} else {
+				theConnection = DriverManager.getConnection(conStr);
+			}
 		}
 		catch (Exception ex) {
 			// Eh.... just give up
             ex.printStackTrace();
-            System.out.println("Connection failed");
 			throw new ExceptionInInitializerError(ex.toString());
 		}
 	}
