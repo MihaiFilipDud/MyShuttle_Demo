@@ -1,7 +1,7 @@
 
 --
 
-DROP TABLE IF EXISTS 'employees';
+
 CREATE TABLE "employees" ;
 
 --
@@ -23,7 +23,7 @@ SET IDENTITY_INSERT "employees" OFF;
 -- Structur? tabel pentru tabel "fares"
 --
 
-DROP TABLE IF EXISTS 'fares';
+
 CREATE TABLE "fares" ;
 
 --
