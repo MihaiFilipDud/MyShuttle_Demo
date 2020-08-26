@@ -65,7 +65,7 @@ INSERT INTO "fares" ("id", "emp_id", "pickup", "dropoff", "start", "end", "fare_
 (20, 6, '43 Brontosaurus Blvd, Bedrock, WA', '51 Stegasaurus St, Rock Gardens, WA', '2014-05-17 10:41:00', '2014-05-17 10:53:00', 1460, 1095, 3, 2);
 
 SET IDENTITY_INSERT "fares" OFF;
-COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
